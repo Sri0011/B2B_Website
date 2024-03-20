@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SETU Hackathon - B2B Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light grey background */
+        }
+
+        .background {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .admin-panel {
+            background-color: #007bff; /* Dark blue */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .admin-panel h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            background-color: #ffffff; /* White */
+            padding: 20px 0;
+        }
+
+        .container form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff; /* Dark blue */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #00008B; /* Dark blue */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="admin-panel">
+            <div class="container">
+                <h1><i class="fas fa-user-cog"></i> B2B Admin Panel</h1>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="container">
+                <form id="instructorForm">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedinProfile"><i class="fab fa-linkedin"></i> LinkedIn Profile</label>
+                        <input type="text" id="linkedinProfile" name="linkedinProfile" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bio"><i class="fas fa-user-edit"></i> Short Bio</label>
+                        <textarea id="bio" name="bio" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo"><i class="fas fa-image"></i> Choose File</label>
+                        <input type="file" id="photo" name="photo" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category"><i class="fas fa-list"></i> Select Category</label>
+                        <select id="category" name="category" required>
+                            <option value="" disabled selected>Select Category</option>
+                            <option value="faculty">Faculty</option>
+                            <option value="industry_mentor">Industry Mentor</option>
+                            <option value="teaching_assistant">Teaching Assistant</option>
+                        </select>
+                    </div>
+                    <button type="submit"><i class="fas fa-check"></i> Submit</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 SETU Hackathon - B2B</p>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
